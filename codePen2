@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Developer Cards</title>
+  <style>
+    :root {
+      --color1: #f48fb1;
+      --color2: #69f069;
+      --color3: #448aff; 
+    }
+
+    body {
+      background-color: #111;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      margin: 0;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #333;
+      border-radius: 12px;
+      padding: 1.5rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .initial {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: gray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .card h3 {
+      margin: 0;
+    }
+
+    .card .role {
+      font-weight: bold;
+      margin-bottom: auto; 
+      text-align: center;
+    }
+
+    button {
+      background: #666;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      margin-top: 0.5rem;
+      width: 100%;
+      cursor: default;
+    }
+
+    /* צבעים לפי הסדר */
+    .card:nth-child(1) .initial {
+      background: var(--color1);
+    }
+    .card:nth-child(1) .role {
+      color: var(--color1);
+    }
+
+    .card:nth-child(2) .initial {
+      background: var(--color2);
+    }
+    .card:nth-child(2) .role {
+      color: var(--color2);
+    }
+
+    .card:nth-child(3) .initial {
+      background: var(--color3);
+    }
+    .card:nth-child(3) .role {
+      color: var(--color3);
+    }
+
+    
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .card {
+        width: 90%;
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cards">
+    <div class="card">
+      <div class="initial">R</div>
+      <h3>Rina Cohen</h3>
+      <p class="role">Front-end & Back-end developer</p>
+      <button>HTML</button>
+      <button>CSS</button>
+      <button>JavaScript</button>
+      <button>React</button>
+      <button>NodeJS</button>
+    </div>
+
+    <div class="card">
+      <div class="initial">M</div>
+      <h3>Mina Friedman</h3>
+      <p class="role">Back-end developer</p>
+      <button>NodeJS</button>
+      <button>MongoDB</button>
+      <button>C#</button>
+    </div>
+
+    <div class="card">
+      <div class="initial">D</div>
+      <h3>Dina Levi</h3>
+      <p class="role">Front-end developer</p>
+      <button>HTML</button>
+      <button>CSS</button>
+      <button>JavaScript</button>
+      <button>React</button>
+    </div>
+  </div>
+</body>
+</html>
